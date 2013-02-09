@@ -1,6 +1,10 @@
 package com.simba.shuttlebus;
 
-public class ShuttleBus implements Comparable<ShuttleBus> {
+import java.io.Serializable;
+
+public class ShuttleBus implements Serializable, Comparable<ShuttleBus>{
+
+	private static final long serialVersionUID = 5821146057457384635L;
 	private String time;
 	private String point;
 	private String mallName;
@@ -31,7 +35,7 @@ public class ShuttleBus implements Comparable<ShuttleBus> {
 	}
 	@Override
 	public String toString() {
-		return time + ":" + point + "->" + mallName;
+		return time + ":" + point + "->" + mallName + " (" + type + ")";
 	}
 	@Override
 	public int compareTo(ShuttleBus another) {

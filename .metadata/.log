@@ -1,0 +1,249 @@
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-02-03 18:09:53.798
+!MESSAGE 
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/ShuttleBus/res' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:341)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:215)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:266)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:249)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk$6.run(Sdk.java:1306)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2013-02-03 18:09:53.798
+!MESSAGE Resource '/ShuttleBus/res' does not exist.
+
+!ENTRY org.eclipse.core.resources 2 2 2013-02-03 18:09:53.821
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2013-02-03 18:09:53.822
+!MESSAGE The project description file (.project) for 'FoolLink' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-02-03 18:10:43.565
+!MESSAGE Unable to read /Users/wusiying/Documents/Android/FoolLink/AndroidManifest.xml: org.eclipse.core.internal.resources.ResourceException: File not found: /Users/wusiying/Documents/Android/FoolLink/AndroidManifest.xml.
+!STACK 0
+com.android.io.StreamException: org.eclipse.core.internal.resources.ResourceException: File not found: /Users/wusiying/Documents/Android/FoolLink/AndroidManifest.xml.
+	at com.android.ide.eclipse.adt.io.IFileWrapper.getContents(IFileWrapper.java:55)
+	at com.android.ide.common.xml.AndroidManifestParser.parse(AndroidManifestParser.java:608)
+	at com.android.ide.eclipse.adt.internal.project.AndroidManifestHelper.parseUnchecked(AndroidManifestHelper.java:75)
+	at com.android.ide.eclipse.adt.internal.project.AndroidManifestHelper.parse(AndroidManifestHelper.java:102)
+	at com.android.ide.eclipse.adt.internal.project.AndroidManifestHelper.parseForData(AndroidManifestHelper.java:177)
+	at com.android.ide.eclipse.adt.internal.project.ProjectHelper.findAndroidProjectByAppName(ProjectHelper.java:534)
+	at com.android.ide.eclipse.adt.DebuggerConnector$WorkspaceAppCache.isWorkspaceApp(DebuggerConnector.java:96)
+	at com.android.ide.eclipse.adt.DebuggerConnector.isWorkspaceApp(DebuggerConnector.java:60)
+	at com.android.ide.eclipse.ddms.LogCatMonitor.isImportantMessage(LogCatMonitor.java:179)
+	at com.android.ide.eclipse.ddms.LogCatMonitor.checkMessages(LogCatMonitor.java:157)
+	at com.android.ide.eclipse.ddms.LogCatMonitor.access$4(LogCatMonitor.java:148)
+	at com.android.ide.eclipse.ddms.LogCatMonitor$3.bufferChanged(LogCatMonitor.java:140)
+	at com.android.ddmuilib.logcat.LogCatReceiver.sendLogChangedEvent(LogCatReceiver.java:205)
+	at com.android.ddmuilib.logcat.LogCatReceiver.processLogMessages(LogCatReceiver.java:171)
+	at com.android.ddmuilib.logcat.LogCatReceiver.processLogLines(LogCatReceiver.java:161)
+	at com.android.ddmuilib.logcat.LogCatReceiver.access$300(LogCatReceiver.java:36)
+	at com.android.ddmuilib.logcat.LogCatReceiver$LogCatOutputReceiver.processNewLines(LogCatReceiver.java:153)
+	at com.android.ddmlib.MultiLineReceiver.addOutput(MultiLineReceiver.java:100)
+	at com.android.ddmlib.AdbHelper.executeRemoteCommand(AdbHelper.java:419)
+	at com.android.ddmlib.Device.executeShellCommand(Device.java:462)
+	at com.android.ddmuilib.logcat.LogCatReceiver$1.run(LogCatReceiver.java:110)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.eclipse.core.internal.resources.ResourceException: File not found: /Users/wusiying/Documents/Android/FoolLink/AndroidManifest.xml.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:783)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at com.android.ide.eclipse.adt.io.IFileWrapper.getContents(IFileWrapper.java:49)
+	... 21 more
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-02-03 18:10:44.607
+!MESSAGE Unable to read /Users/wusiying/Documents/Android/FoolLink/AndroidManifest.xml: org.eclipse.core.internal.resources.ResourceException: File not found: /Users/wusiying/Documents/Android/FoolLink/AndroidManifest.xml.
+!STACK 0
+com.android.io.StreamException: org.eclipse.core.internal.resources.ResourceException: File not found: /Users/wusiying/Documents/Android/FoolLink/AndroidManifest.xml.
+	at com.android.ide.eclipse.adt.io.IFileWrapper.getContents(IFileWrapper.java:55)
+	at com.android.ide.common.xml.AndroidManifestParser.parse(AndroidManifestParser.java:608)
+	at com.android.ide.eclipse.adt.internal.project.AndroidManifestHelper.parseUnchecked(AndroidManifestHelper.java:75)
+	at com.android.ide.eclipse.adt.internal.project.AndroidManifestHelper.parse(AndroidManifestHelper.java:102)
+	at com.android.ide.eclipse.adt.internal.project.AndroidManifestHelper.parseForData(AndroidManifestHelper.java:177)
+	at com.android.ide.eclipse.adt.internal.project.ProjectHelper.findAndroidProjectByAppName(ProjectHelper.java:534)
+	at com.android.ide.eclipse.adt.DebuggerConnector$WorkspaceAppCache.isWorkspaceApp(DebuggerConnector.java:96)
+	at com.android.ide.eclipse.adt.DebuggerConnector.isWorkspaceApp(DebuggerConnector.java:60)
+	at com.android.ide.eclipse.ddms.LogCatMonitor.isImportantMessage(LogCatMonitor.java:179)
+	at com.android.ide.eclipse.ddms.LogCatMonitor.checkMessages(LogCatMonitor.java:157)
+	at com.android.ide.eclipse.ddms.LogCatMonitor.access$4(LogCatMonitor.java:148)
+	at com.android.ide.eclipse.ddms.LogCatMonitor$3.bufferChanged(LogCatMonitor.java:140)
+	at com.android.ddmuilib.logcat.LogCatReceiver.sendLogChangedEvent(LogCatReceiver.java:205)
+	at com.android.ddmuilib.logcat.LogCatReceiver.processLogMessages(LogCatReceiver.java:171)
+	at com.android.ddmuilib.logcat.LogCatReceiver.processLogLines(LogCatReceiver.java:161)
+	at com.android.ddmuilib.logcat.LogCatReceiver.access$300(LogCatReceiver.java:36)
+	at com.android.ddmuilib.logcat.LogCatReceiver$LogCatOutputReceiver.processNewLines(LogCatReceiver.java:153)
+	at com.android.ddmlib.MultiLineReceiver.addOutput(MultiLineReceiver.java:100)
+	at com.android.ddmlib.AdbHelper.executeRemoteCommand(AdbHelper.java:419)
+	at com.android.ddmlib.Device.executeShellCommand(Device.java:462)
+	at com.android.ddmuilib.logcat.LogCatReceiver$1.run(LogCatReceiver.java:110)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.eclipse.core.internal.resources.ResourceException: File not found: /Users/wusiying/Documents/Android/FoolLink/AndroidManifest.xml.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:783)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at com.android.ide.eclipse.adt.io.IFileWrapper.getContents(IFileWrapper.java:49)
+	... 21 more
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-02-03 18:10:48.880
+!MESSAGE Unable to read /Users/wusiying/Documents/Android/FoolLink/AndroidManifest.xml: org.eclipse.core.internal.resources.ResourceException: File not found: /Users/wusiying/Documents/Android/FoolLink/AndroidManifest.xml.
+!STACK 0
+com.android.io.StreamException: org.eclipse.core.internal.resources.ResourceException: File not found: /Users/wusiying/Documents/Android/FoolLink/AndroidManifest.xml.
+	at com.android.ide.eclipse.adt.io.IFileWrapper.getContents(IFileWrapper.java:55)
+	at com.android.ide.common.xml.AndroidManifestParser.parse(AndroidManifestParser.java:608)
+	at com.android.ide.eclipse.adt.internal.project.AndroidManifestHelper.parseUnchecked(AndroidManifestHelper.java:75)
+	at com.android.ide.eclipse.adt.internal.project.AndroidManifestHelper.parse(AndroidManifestHelper.java:102)
+	at com.android.ide.eclipse.adt.internal.project.AndroidManifestHelper.parseForData(AndroidManifestHelper.java:177)
+	at com.android.ide.eclipse.adt.internal.project.ProjectHelper.findAndroidProjectByAppName(ProjectHelper.java:534)
+	at com.android.ide.eclipse.adt.DebuggerConnector$WorkspaceAppCache.isWorkspaceApp(DebuggerConnector.java:96)
+	at com.android.ide.eclipse.adt.DebuggerConnector.isWorkspaceApp(DebuggerConnector.java:60)
+	at com.android.ide.eclipse.ddms.LogCatMonitor.isImportantMessage(LogCatMonitor.java:179)
+	at com.android.ide.eclipse.ddms.LogCatMonitor.checkMessages(LogCatMonitor.java:157)
+	at com.android.ide.eclipse.ddms.LogCatMonitor.access$4(LogCatMonitor.java:148)
+	at com.android.ide.eclipse.ddms.LogCatMonitor$3.bufferChanged(LogCatMonitor.java:140)
+	at com.android.ddmuilib.logcat.LogCatReceiver.sendLogChangedEvent(LogCatReceiver.java:205)
+	at com.android.ddmuilib.logcat.LogCatReceiver.processLogMessages(LogCatReceiver.java:171)
+	at com.android.ddmuilib.logcat.LogCatReceiver.processLogLines(LogCatReceiver.java:161)
+	at com.android.ddmuilib.logcat.LogCatReceiver.access$300(LogCatReceiver.java:36)
+	at com.android.ddmuilib.logcat.LogCatReceiver$LogCatOutputReceiver.processNewLines(LogCatReceiver.java:153)
+	at com.android.ddmlib.MultiLineReceiver.addOutput(MultiLineReceiver.java:100)
+	at com.android.ddmlib.AdbHelper.executeRemoteCommand(AdbHelper.java:419)
+	at com.android.ddmlib.Device.executeShellCommand(Device.java:462)
+	at com.android.ddmuilib.logcat.LogCatReceiver$1.run(LogCatReceiver.java:110)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.eclipse.core.internal.resources.ResourceException: File not found: /Users/wusiying/Documents/Android/FoolLink/AndroidManifest.xml.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:783)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at com.android.ide.eclipse.adt.io.IFileWrapper.getContents(IFileWrapper.java:49)
+	... 21 more
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-02-03 18:10:56.060
+!MESSAGE Unable to read /Users/wusiying/Documents/Android/FoolLink/AndroidManifest.xml: org.eclipse.core.internal.resources.ResourceException: File not found: /Users/wusiying/Documents/Android/FoolLink/AndroidManifest.xml.
+!STACK 0
+com.android.io.StreamException: org.eclipse.core.internal.resources.ResourceException: File not found: /Users/wusiying/Documents/Android/FoolLink/AndroidManifest.xml.
+	at com.android.ide.eclipse.adt.io.IFileWrapper.getContents(IFileWrapper.java:55)
+	at com.android.ide.common.xml.AndroidManifestParser.parse(AndroidManifestParser.java:608)
+	at com.android.ide.eclipse.adt.internal.project.AndroidManifestHelper.parseUnchecked(AndroidManifestHelper.java:75)
+	at com.android.ide.eclipse.adt.internal.project.AndroidManifestHelper.parse(AndroidManifestHelper.java:102)
+	at com.android.ide.eclipse.adt.internal.project.AndroidManifestHelper.parseForData(AndroidManifestHelper.java:177)
+	at com.android.ide.eclipse.adt.internal.project.ProjectHelper.findAndroidProjectByAppName(ProjectHelper.java:534)
+	at com.android.ide.eclipse.adt.DebuggerConnector$WorkspaceAppCache.isWorkspaceApp(DebuggerConnector.java:96)
+	at com.android.ide.eclipse.adt.DebuggerConnector.isWorkspaceApp(DebuggerConnector.java:60)
+	at com.android.ide.eclipse.ddms.LogCatMonitor.isImportantMessage(LogCatMonitor.java:179)
+	at com.android.ide.eclipse.ddms.LogCatMonitor.checkMessages(LogCatMonitor.java:157)
+	at com.android.ide.eclipse.ddms.LogCatMonitor.access$4(LogCatMonitor.java:148)
+	at com.android.ide.eclipse.ddms.LogCatMonitor$3.bufferChanged(LogCatMonitor.java:140)
+	at com.android.ddmuilib.logcat.LogCatReceiver.sendLogChangedEvent(LogCatReceiver.java:205)
+	at com.android.ddmuilib.logcat.LogCatReceiver.processLogMessages(LogCatReceiver.java:171)
+	at com.android.ddmuilib.logcat.LogCatReceiver.processLogLines(LogCatReceiver.java:161)
+	at com.android.ddmuilib.logcat.LogCatReceiver.access$300(LogCatReceiver.java:36)
+	at com.android.ddmuilib.logcat.LogCatReceiver$LogCatOutputReceiver.processNewLines(LogCatReceiver.java:153)
+	at com.android.ddmlib.MultiLineReceiver.addOutput(MultiLineReceiver.java:100)
+	at com.android.ddmlib.AdbHelper.executeRemoteCommand(AdbHelper.java:419)
+	at com.android.ddmlib.Device.executeShellCommand(Device.java:462)
+	at com.android.ddmuilib.logcat.LogCatReceiver$1.run(LogCatReceiver.java:110)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.eclipse.core.internal.resources.ResourceException: File not found: /Users/wusiying/Documents/Android/FoolLink/AndroidManifest.xml.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:783)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at com.android.ide.eclipse.adt.io.IFileWrapper.getContents(IFileWrapper.java:49)
+	... 21 more
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-02-03 19:28:35.047
+!MESSAGE Unable to read /Users/wusiying/Documents/Android/FoolLink/AndroidManifest.xml: org.eclipse.core.internal.resources.ResourceException: File not found: /Users/wusiying/Documents/Android/FoolLink/AndroidManifest.xml.
+!STACK 0
+com.android.io.StreamException: org.eclipse.core.internal.resources.ResourceException: File not found: /Users/wusiying/Documents/Android/FoolLink/AndroidManifest.xml.
+	at com.android.ide.eclipse.adt.io.IFileWrapper.getContents(IFileWrapper.java:55)
+	at com.android.ide.common.xml.AndroidManifestParser.parse(AndroidManifestParser.java:608)
+	at com.android.ide.eclipse.adt.internal.project.AndroidManifestHelper.parseUnchecked(AndroidManifestHelper.java:75)
+	at com.android.ide.eclipse.adt.internal.project.AndroidManifestHelper.parse(AndroidManifestHelper.java:102)
+	at com.android.ide.eclipse.adt.internal.project.AndroidManifestHelper.parseForData(AndroidManifestHelper.java:177)
+	at com.android.ide.eclipse.adt.internal.project.ProjectHelper.findAndroidProjectByAppName(ProjectHelper.java:534)
+	at com.android.ide.eclipse.adt.DebuggerConnector$WorkspaceAppCache.isWorkspaceApp(DebuggerConnector.java:96)
+	at com.android.ide.eclipse.adt.DebuggerConnector.isWorkspaceApp(DebuggerConnector.java:60)
+	at com.android.ide.eclipse.ddms.LogCatMonitor.isImportantMessage(LogCatMonitor.java:179)
+	at com.android.ide.eclipse.ddms.LogCatMonitor.checkMessages(LogCatMonitor.java:157)
+	at com.android.ide.eclipse.ddms.LogCatMonitor.access$4(LogCatMonitor.java:148)
+	at com.android.ide.eclipse.ddms.LogCatMonitor$3.bufferChanged(LogCatMonitor.java:140)
+	at com.android.ddmuilib.logcat.LogCatReceiver.sendLogChangedEvent(LogCatReceiver.java:205)
+	at com.android.ddmuilib.logcat.LogCatReceiver.processLogMessages(LogCatReceiver.java:171)
+	at com.android.ddmuilib.logcat.LogCatReceiver.processLogLines(LogCatReceiver.java:161)
+	at com.android.ddmuilib.logcat.LogCatReceiver.access$300(LogCatReceiver.java:36)
+	at com.android.ddmuilib.logcat.LogCatReceiver$LogCatOutputReceiver.processNewLines(LogCatReceiver.java:153)
+	at com.android.ddmlib.MultiLineReceiver.addOutput(MultiLineReceiver.java:100)
+	at com.android.ddmlib.AdbHelper.executeRemoteCommand(AdbHelper.java:419)
+	at com.android.ddmlib.Device.executeShellCommand(Device.java:462)
+	at com.android.ddmuilib.logcat.LogCatReceiver$1.run(LogCatReceiver.java:110)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.eclipse.core.internal.resources.ResourceException: File not found: /Users/wusiying/Documents/Android/FoolLink/AndroidManifest.xml.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:783)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at com.android.ide.eclipse.adt.io.IFileWrapper.getContents(IFileWrapper.java:49)
+	... 21 more
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-02-08 13:42:43.821
+!MESSAGE Unable to read /Users/wusiying/Documents/Android/FoolLink/AndroidManifest.xml: org.eclipse.core.internal.resources.ResourceException: File not found: /Users/wusiying/Documents/Android/FoolLink/AndroidManifest.xml.
+!STACK 0
+com.android.io.StreamException: org.eclipse.core.internal.resources.ResourceException: File not found: /Users/wusiying/Documents/Android/FoolLink/AndroidManifest.xml.
+	at com.android.ide.eclipse.adt.io.IFileWrapper.getContents(IFileWrapper.java:55)
+	at com.android.ide.common.xml.AndroidManifestParser.parse(AndroidManifestParser.java:608)
+	at com.android.ide.eclipse.adt.internal.project.AndroidManifestHelper.parseUnchecked(AndroidManifestHelper.java:75)
+	at com.android.ide.eclipse.adt.internal.project.AndroidManifestHelper.parse(AndroidManifestHelper.java:102)
+	at com.android.ide.eclipse.adt.internal.project.AndroidManifestHelper.parseForData(AndroidManifestHelper.java:177)
+	at com.android.ide.eclipse.adt.internal.project.ProjectHelper.findAndroidProjectByAppName(ProjectHelper.java:534)
+	at com.android.ide.eclipse.adt.DebuggerConnector$WorkspaceAppCache.isWorkspaceApp(DebuggerConnector.java:96)
+	at com.android.ide.eclipse.adt.DebuggerConnector.isWorkspaceApp(DebuggerConnector.java:60)
+	at com.android.ide.eclipse.ddms.LogCatMonitor.isImportantMessage(LogCatMonitor.java:179)
+	at com.android.ide.eclipse.ddms.LogCatMonitor.checkMessages(LogCatMonitor.java:157)
+	at com.android.ide.eclipse.ddms.LogCatMonitor.access$4(LogCatMonitor.java:148)
+	at com.android.ide.eclipse.ddms.LogCatMonitor$3.bufferChanged(LogCatMonitor.java:140)
+	at com.android.ddmuilib.logcat.LogCatReceiver.sendLogChangedEvent(LogCatReceiver.java:205)
+	at com.android.ddmuilib.logcat.LogCatReceiver.processLogMessages(LogCatReceiver.java:171)
+	at com.android.ddmuilib.logcat.LogCatReceiver.processLogLines(LogCatReceiver.java:161)
+	at com.android.ddmuilib.logcat.LogCatReceiver.access$300(LogCatReceiver.java:36)
+	at com.android.ddmuilib.logcat.LogCatReceiver$LogCatOutputReceiver.processNewLines(LogCatReceiver.java:153)
+	at com.android.ddmlib.MultiLineReceiver.addOutput(MultiLineReceiver.java:100)
+	at com.android.ddmlib.AdbHelper.executeRemoteCommand(AdbHelper.java:419)
+	at com.android.ddmlib.Device.executeShellCommand(Device.java:462)
+	at com.android.ddmuilib.logcat.LogCatReceiver$1.run(LogCatReceiver.java:110)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.eclipse.core.internal.resources.ResourceException: File not found: /Users/wusiying/Documents/Android/FoolLink/AndroidManifest.xml.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:783)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at com.android.ide.eclipse.adt.io.IFileWrapper.getContents(IFileWrapper.java:49)
+	... 21 more
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-02-09 12:55:49.438
+!MESSAGE Unable to read /Users/wusiying/Documents/Android/FoolLink/AndroidManifest.xml: org.eclipse.core.internal.resources.ResourceException: File not found: /Users/wusiying/Documents/Android/FoolLink/AndroidManifest.xml.
+!STACK 0
+com.android.io.StreamException: org.eclipse.core.internal.resources.ResourceException: File not found: /Users/wusiying/Documents/Android/FoolLink/AndroidManifest.xml.
+	at com.android.ide.eclipse.adt.io.IFileWrapper.getContents(IFileWrapper.java:55)
+	at com.android.ide.common.xml.AndroidManifestParser.parse(AndroidManifestParser.java:608)
+	at com.android.ide.eclipse.adt.internal.project.AndroidManifestHelper.parseUnchecked(AndroidManifestHelper.java:75)
+	at com.android.ide.eclipse.adt.internal.project.AndroidManifestHelper.parse(AndroidManifestHelper.java:102)
+	at com.android.ide.eclipse.adt.internal.project.AndroidManifestHelper.parseForData(AndroidManifestHelper.java:177)
+	at com.android.ide.eclipse.adt.internal.project.ProjectHelper.findAndroidProjectByAppName(ProjectHelper.java:534)
+	at com.android.ide.eclipse.adt.DebuggerConnector$WorkspaceAppCache.isWorkspaceApp(DebuggerConnector.java:96)
+	at com.android.ide.eclipse.adt.DebuggerConnector.isWorkspaceApp(DebuggerConnector.java:60)
+	at com.android.ide.eclipse.ddms.LogCatMonitor.isImportantMessage(LogCatMonitor.java:179)
+	at com.android.ide.eclipse.ddms.LogCatMonitor.checkMessages(LogCatMonitor.java:157)
+	at com.android.ide.eclipse.ddms.LogCatMonitor.access$4(LogCatMonitor.java:148)
+	at com.android.ide.eclipse.ddms.LogCatMonitor$3.bufferChanged(LogCatMonitor.java:140)
+	at com.android.ddmuilib.logcat.LogCatReceiver.sendLogChangedEvent(LogCatReceiver.java:205)
+	at com.android.ddmuilib.logcat.LogCatReceiver.processLogMessages(LogCatReceiver.java:171)
+	at com.android.ddmuilib.logcat.LogCatReceiver.processLogLines(LogCatReceiver.java:161)
+	at com.android.ddmuilib.logcat.LogCatReceiver.access$300(LogCatReceiver.java:36)
+	at com.android.ddmuilib.logcat.LogCatReceiver$LogCatOutputReceiver.processNewLines(LogCatReceiver.java:153)
+	at com.android.ddmlib.MultiLineReceiver.addOutput(MultiLineReceiver.java:100)
+	at com.android.ddmlib.AdbHelper.executeRemoteCommand(AdbHelper.java:419)
+	at com.android.ddmlib.Device.executeShellCommand(Device.java:462)
+	at com.android.ddmuilib.logcat.LogCatReceiver$1.run(LogCatReceiver.java:110)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.eclipse.core.internal.resources.ResourceException: File not found: /Users/wusiying/Documents/Android/FoolLink/AndroidManifest.xml.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:783)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at com.android.ide.eclipse.adt.io.IFileWrapper.getContents(IFileWrapper.java:49)
+	... 21 more

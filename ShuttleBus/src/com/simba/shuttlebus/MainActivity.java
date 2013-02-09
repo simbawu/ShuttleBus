@@ -9,7 +9,6 @@ import java.util.List;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
-import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -37,26 +36,30 @@ public class MainActivity extends Activity {
 				List<ShuttleBus> availableBus = holder.getAvailableBusesGo();
 				if (availableBus.size() == 0)
 					return;
-				ShuttleBus[] busArray = new ShuttleBus[availableBus.size()];
-				busArray = (ShuttleBus[]) availableBus.toArray(busArray);
+				final ShuttleBus[] busArray = new ShuttleBus[availableBus.size()];
+				availableBus.toArray(busArray);
 				ArrayAdapter<ShuttleBus> adapter = new ArrayAdapter<ShuttleBus>(
 						MainActivity.this, android.R.layout.simple_list_item_1,
 						busArray);
 				ListView lvBus = (ListView) findViewById(R.id.lvBuses);
 				lvBus.setAdapter(adapter);
-				lvBus.setOnItemClickListener(mMessageClickedHandler);
+				lvBus.setOnItemClickListener(new OnItemClickListener() {
+
+					@Override
+					public void onItemClick(AdapterView<?> arg0, View arg1,
+							int position, long arg3) {
+				    	Intent intent = new Intent(MainActivity.this, ShowBackActivity.class);
+				    	intent.putExtra("bus", busArray[position]);
+				    	startActivity(intent);
+						
+					}
+					
+				});
 			}
 		});
 	}
 	
-	private OnItemClickListener mMessageClickedHandler = new OnItemClickListener() {
-	    public void onItemClick(AdapterView parent, View v, int position, long id) {
-	    	Log.i("String", String.valueOf(position));
-	    	Intent intent = new Intent(MainActivity.this, ShowBackActivity.class);
-	    	intent.putExtra("bus", String.valueOf(position));
-	    	startActivity(intent);
-	    }
-	};
+
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -67,6 +70,7 @@ public class MainActivity extends Activity {
 
 	private void loadData() {
 		laodDataForMall(R.raw.walmark_bus);
+
 		
 	}
 

@@ -15,8 +15,9 @@ public final class R {
     }
     public static final class id {
         public static final int btnGoToMart=0x7f080000;
+        public static final int lvBusReturn=0x7f080003;
         public static final int lvBuses=0x7f080001;
-        public static final int menu_settings=0x7f080003;
+        public static final int menu_settings=0x7f080004;
         public static final int test=0x7f080002;
     }
     public static final class layout {
@@ -28,13 +29,15 @@ public final class R {
         public static final int activity_show_back=0x7f070001;
     }
     public static final class raw {
-        public static final int walmark_bus=0x7f040000;
+        public static final int bus_return=0x7f040000;
+        public static final int walmark_bus=0x7f040001;
     }
     public static final class string {
         public static final int app_name=0x7f050000;
         public static final int go_to_supermart=0x7f050003;
         public static final int hello_world=0x7f050001;
         public static final int menu_settings=0x7f050002;
+        public static final int show_retrun=0x7f050005;
         public static final int title_activity_show_back=0x7f050004;
     }
     public static final class style {

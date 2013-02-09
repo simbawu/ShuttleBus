@@ -43,6 +43,17 @@ public class ShuttleBusHolder {
 		Collections.sort(availableBuses);
 		return availableBuses;
 	}
+	
+	public List<ShuttleBus> getBusesByTimeStop(String timeStr, String stop){
+		List<ShuttleBus> availableBuses = new ArrayList<ShuttleBus>();
+		for (int i = 0; i < shuttlebuses.size(); i++) {
+			if(shuttlebuses.get(i).getTime().compareTo(timeStr) > 0 && shuttlebuses.get(i).getPoint().equals(stop)){
+				availableBuses.add(shuttlebuses.get(i));
+			}
+		}
+		Collections.sort(availableBuses);
+		return availableBuses;
+	}
 		
 	
 }
