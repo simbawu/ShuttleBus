@@ -4,11 +4,17 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.TimePickerDialog;
 import android.content.Intent;
+import android.support.v4.app.DialogFragment;
+import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -17,8 +23,10 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.TimePicker;
 
-public class MainActivity extends Activity {
+public class MainActivity extends FragmentActivity implements TimePickerDialog.OnTimeSetListener {
 	private ShuttleBusHolder holder;
 
 	@Override
@@ -27,20 +35,26 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		holder = new ShuttleBusHolder();
 		loadData();
-		// final TextView tv = (TextView)findViewById(R.id.tvHelloWorld);
+		final TextView tvTime= (TextView) findViewById(R.id.tvTime);
+		SimpleDateFormat timeFormater=new SimpleDateFormat("HH:mm", Locale.CHINA);
+		String now = timeFormater.format(new Date());
+		tvTime.setText(now);
 		Button btnGoToMart = (Button) findViewById(R.id.btnGoToMart);
 		btnGoToMart.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View arg0) {
-				List<ShuttleBus> availableBus = holder.getAvailableBusesGo();
-				if (availableBus.size() == 0)
-					return;
+				
+				String userTime = tvTime.getText().toString();
+				List<ShuttleBus> availableBus = holder.getAvailableBusesGo(userTime);
+//				if (availableBus.size() == 0)
+//					return;
 				final ShuttleBus[] busArray = new ShuttleBus[availableBus.size()];
 				availableBus.toArray(busArray);
 				ArrayAdapter<ShuttleBus> adapter = new ArrayAdapter<ShuttleBus>(
 						MainActivity.this, android.R.layout.simple_list_item_1,
 						busArray);
+				
 				ListView lvBus = (ListView) findViewById(R.id.lvBuses);
 				lvBus.setAdapter(adapter);
 				lvBus.setOnItemClickListener(new OnItemClickListener() {
@@ -91,4 +105,21 @@ public class MainActivity extends Activity {
 			e1.printStackTrace();
 		}
 	}
+	public void showTimePickerDialog(View v) {
+	    DialogFragment newFragment = new TimePickerFragment();
+	    //newFragment.onAttach(activity)
+	    newFragment.show(getSupportFragmentManager(), "timePicker");
+	}
+
+
+
+	@Override
+	public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+		String userTime = (Integer.toString(hourOfDay).length()==1 ? ("0" + Integer.toString(hourOfDay)) : Integer.toString(hourOfDay))
+				+ ":" + (Integer.toString(minute).length()==1 ? ("0" + Integer.toString(minute)) : Integer.toString(minute));
+		TextView tvTime= (TextView) findViewById(R.id.tvTime);
+		tvTime.setText(userTime);
+	}
+	
+	
 }

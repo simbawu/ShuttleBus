@@ -4,7 +4,24 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity" >
 
+    <ListView
+        android:id="@+id/lvBuses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btnGoToMart"
+        android:layout_marginTop="22dp" >
+    </ListView>
 
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnGoToMart"
+        android:layout_alignBottom="@+id/btnGoToMart"
+        android:layout_centerHorizontal="true"
+        android:onClick="showTimePickerDialog"
+        android:text="@string/default_time" />
 
     <Button
         android:id="@+id/btnGoToMart"
@@ -12,19 +29,18 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="21dp"
         android:text="@string/go_to_supermart" />
 
-    <ListView
-        android:id="@+id/lvBuses"
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/btSetTime"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/btnGoToMart"
-        android:layout_below="@+id/btnGoToMart"
-        android:layout_marginTop="20dp" >
-    </ListView>
-
-
+        android:layout_above="@+id/lvBuses"
+        android:layout_marginLeft="24dp"
+        android:layout_toRightOf="@+id/tvTime"
+        android:onClick="showTimePickerDialog"
+        android:text="@string/set_time" />
 
 </RelativeLayout>

@@ -11,7 +11,6 @@ import android.app.Activity;
 import android.view.Menu;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 
 public class ShowBackActivity extends Activity {
 
@@ -22,8 +21,6 @@ public class ShowBackActivity extends Activity {
 		setContentView(R.layout.activity_show_back);
 		laodBusReturnData();
 		ShuttleBus busToGo = (ShuttleBus)getIntent().getSerializableExtra("bus");
-//		TextView tv = (TextView)findViewById(R.id.test);
-//		tv.setText(busToGo.toString());
 		List<ShuttleBus> busReturn = holder.getBusesByTimeStop(busToGo.getTime(), busToGo.getMallName());
 		if (busReturn.size() == 0)
 			return;

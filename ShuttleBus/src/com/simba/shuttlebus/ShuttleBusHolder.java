@@ -1,11 +1,8 @@
 package com.simba.shuttlebus;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 
 
 public class ShuttleBusHolder {
@@ -31,12 +28,12 @@ public class ShuttleBusHolder {
 		shuttlebuses.add(shuttleBus);
 	}
 	
-	public List<ShuttleBus> getAvailableBusesGo(){
+	public List<ShuttleBus> getAvailableBusesGo(String time){
 		List<ShuttleBus> availableBuses = new ArrayList<ShuttleBus>();
-		SimpleDateFormat timeFormater=new SimpleDateFormat("HH:mm", Locale.CHINA);
-		String now = timeFormater.format(new Date());
+//		SimpleDateFormat timeFormater=new SimpleDateFormat("HH:mm", Locale.CHINA);
+//		String now = timeFormater.format(new Date());
 		for (int i = 0; i < shuttlebuses.size(); i++) {
-			if(shuttlebuses.get(i).getTime().compareTo(now) > 0 && shuttlebuses.get(i).getType().equals("G")){
+			if(shuttlebuses.get(i).getTime().compareTo(time) > 0){
 				availableBuses.add(shuttlebuses.get(i));
 			}
 		}
