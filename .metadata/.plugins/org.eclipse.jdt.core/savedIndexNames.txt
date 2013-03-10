@@ -1,6 +1,0 @@
-INDEX VERSION 1.126+/Users/wusiying/Documents/Android/.metadata/.plugins/org.eclipse.jdt.core
-2482039500.index
-3340150743.index
-2834013983.index
-828575944.index
-1006067882.index
