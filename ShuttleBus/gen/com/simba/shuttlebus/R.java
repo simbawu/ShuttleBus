@@ -30,8 +30,8 @@ public final class R {
         public static final int activity_show_back=0x7f070001;
     }
     public static final class raw {
-        public static final int bus_return=0x7f040000;
-        public static final int walmark_bus=0x7f040001;
+        public static final int bus_go=0x7f040000;
+        public static final int bus_return=0x7f040001;
     }
     public static final class string {
         public static final int app_name=0x7f050000;

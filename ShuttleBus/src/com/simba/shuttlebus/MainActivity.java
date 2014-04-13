@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.Locale;
 
 import android.os.Bundle;
-import android.app.Activity;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.support.v4.app.DialogFragment;
@@ -83,7 +82,7 @@ public class MainActivity extends FragmentActivity implements TimePickerDialog.O
 	}
 
 	private void loadData() {
-		laodDataForMall(R.raw.walmark_bus);
+		laodDataForMall(R.raw.bus_go);
 
 		
 	}
